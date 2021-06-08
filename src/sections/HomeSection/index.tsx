@@ -1,3 +1,4 @@
+import { ScrollSign } from '../../components/ScrollSign';
 import { Container } from './styles';
 
 export const HomeSection = (): JSX.Element => {
@@ -20,6 +21,8 @@ export const HomeSection = (): JSX.Element => {
           <img src="/icons/instagram.svg" alt="Instagram" />
         </a>
       </div>
+
+      <ScrollSign />
     </Container>
   );
 };

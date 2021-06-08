@@ -9,6 +9,8 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
 
+  position: relative;
+
   background-color: #1d1d1daa;
 
   > img {
@@ -75,6 +77,13 @@ export const Container = styled.section`
         filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(306deg)
           brightness(110%) contrast(100%);
       }
+    }
+
+    &:last-child {
+      position: absolute;
+      bottom: 3rem;
+
+      flex-direction: column;
     }
   }
 
