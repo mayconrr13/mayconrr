@@ -16,7 +16,6 @@ export const Container = styled.header`
   > div {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -32,6 +31,14 @@ export const Container = styled.header`
       width: auto;
 
       margin-right: auto;
+    }
+  }
+
+  @media (min-width: 900px) {
+    > div {
+      img {
+        height: 2rem;
+      }
     }
   }
 `;
@@ -53,7 +60,7 @@ export const Navigation = styled.nav<NavigationProps>`
 
   position: absolute;
   top: 0;
-  right: -1.5rem;
+  right: 0;
   z-index: 998;
 
   opacity: ${({ menuIsOpen }) => (menuIsOpen ? 1 : 0)};
@@ -91,6 +98,7 @@ export const Navigation = styled.nav<NavigationProps>`
   }
 
   aside {
+    display: flex;
     margin-top: auto;
 
     span {
@@ -117,6 +125,8 @@ export const Navigation = styled.nav<NavigationProps>`
     padding: 0;
 
     height: 100%;
+
+    background-color: transparent;
 
     ul {
       display: flex;

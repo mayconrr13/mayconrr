@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Header } from '../components/Header';
+import { HomeSection } from '../sections/HomeSection';
 
 export default function Home(): JSX.Element {
   return (
@@ -9,6 +10,7 @@ export default function Home(): JSX.Element {
       </Head>
 
       <Header />
+      <HomeSection />
     </>
   );
 }
