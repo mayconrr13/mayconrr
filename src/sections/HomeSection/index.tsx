@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 export const HomeSection = (): JSX.Element => {
   return (
-    <Container>
+    <Container id="#home">
       <img src="/home-bg.jpg" alt="Home" />
 
       <p>Hi there! I&apos;m</p>

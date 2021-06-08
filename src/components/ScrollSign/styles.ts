@@ -21,6 +21,8 @@ export const Container = styled.div`
     width: 1.5rem;
     height: auto;
 
+    color: #ffffff;
+
     animation: ${scroll} 2s linear infinite;
 
     &:nth-child(2) {
