@@ -1,44 +1,61 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+
 import { SideButtons } from '../SideButtons';
 
 import { Container, Navigation, MenuButton } from './styles';
 
 export const Header = (): JSX.Element => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+  const [windowYPosition, setWindowYPosition] = useState<number>(0);
 
-  console.log(menuIsOpen);
+  useEffect(() => {
+    function getWindowData(): void {
+      setWindowYPosition(window.pageYOffset);
+    }
+
+    window.addEventListener('scroll', getWindowData);
+
+    return () => {
+      window.removeEventListener('scroll', getWindowData);
+    };
+  }, []);
 
   return (
-    <Container>
+    <Container windowPosition={windowYPosition}>
       <div>
-        <img src="/logo.svg" alt="Logo" />
+        <img src="/logo-white.svg" alt="Logo" />
 
-        <Navigation menuIsOpen={menuIsOpen}>
+        <Navigation
+          menuIsOpen={menuIsOpen}
+          windowPosition={windowYPosition}
+          onClick={() => setMenuIsOpen(false)}
+        >
           <ul>
             <li>
-              <a onClick={() => setMenuIsOpen(false)} href="#home">
-                HOME
-              </a>
+              <Link href="#home">
+                <a>HOME</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setMenuIsOpen(false)} href="#about">
-                ABOUT
-              </a>
+              <Link href="#about">
+                <a>ABOUT</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setMenuIsOpen(false)} href="#techs">
-                TECHS
-              </a>
+              <Link href="#techs">
+                <a>TECHS</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setMenuIsOpen(false)} href="#projects">
-                PROJECTS
-              </a>
+              <Link href="#projects">
+                <a>PROJECTS</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setMenuIsOpen(false)} href="#contact">
-                CONTACT
-              </a>
+              <Link href="#contact">
+                <a>CONTACT</a>
+              </Link>
             </li>
           </ul>
 
@@ -50,6 +67,7 @@ export const Header = (): JSX.Element => {
           onClick={() => setMenuIsOpen(!menuIsOpen)}
           aria-hidden
           menuIsOpen={menuIsOpen}
+          windowPosition={windowYPosition}
         >
           <span />
           <span />

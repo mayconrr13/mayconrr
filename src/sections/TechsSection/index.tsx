@@ -4,7 +4,7 @@ import { Container, TechItem } from './styles';
 
 export const TechSection = (): JSX.Element => {
   return (
-    <Container>
+    <Container id="techs">
       <h2>TECHS</h2>
 
       <ul>

@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.header`
+interface HeaderProps {
+  windowPosition: number;
+}
+
+export const Container = styled.header<HeaderProps>`
   width: 100vw;
   height: 5rem;
 
@@ -12,6 +16,18 @@ export const Container = styled.header`
   right: 0;
   left: 0;
   z-index: 997;
+
+  transition: background-color 0.3s ease-in-out;
+
+  ${({ windowPosition }) =>
+    windowPosition >= 150
+      ? css`
+          background-color: var(--background);
+          filter: drop-shadow(5px 5px 10px #36363690);
+        `
+      : css`
+          background-color: transparent;
+        `};
 
   > div {
     display: flex;
@@ -45,16 +61,17 @@ export const Container = styled.header`
 
 interface NavigationProps {
   menuIsOpen: boolean;
+  windowPosition: number;
 }
 
 export const Navigation = styled.nav<NavigationProps>`
   height: 100vh;
 
-  display: ${({ menuIsOpen }) => (menuIsOpen ? 'flex' : 'none')};
+  display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 9rem 0 5rem 0;
+  padding: 5rem 0 3rem 0;
 
   background-color: var(--background);
 
@@ -63,16 +80,26 @@ export const Navigation = styled.nav<NavigationProps>`
   right: 0;
   z-index: 998;
 
+  transition: all 1s;
+
   opacity: ${({ menuIsOpen }) => (menuIsOpen ? 1 : 0)};
+  transform: translateX(${({ menuIsOpen }) => (menuIsOpen ? '0' : '300px')});
 
   ul {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    border-top: 1px solid #363636;
+    border-bottom: 1px solid #363636;
+
     li {
       width: 100%;
       list-style-type: none;
+
+      & + li {
+        border-top: 1px solid #363636;
+      }
 
       a {
         display: block;
@@ -84,10 +111,6 @@ export const Navigation = styled.nav<NavigationProps>`
         letter-spacing: 1px;
 
         color: var(--text);
-
-        border: 1px solid #363636;
-        border-left: none;
-        border-right: none;
 
         &:hover {
           color: var(--primary);
@@ -103,6 +126,7 @@ export const Navigation = styled.nav<NavigationProps>`
 
     span {
       transform: rotate(90deg);
+      margin: 0.25rem 0;
     }
 
     div {
@@ -116,7 +140,9 @@ export const Navigation = styled.nav<NavigationProps>`
   }
 
   @media (min-width: 900px) {
+    transition: none;
     opacity: 1;
+    transform: translateX(0);
 
     display: flex;
     flex-direction: row;
@@ -133,12 +159,18 @@ export const Navigation = styled.nav<NavigationProps>`
       align-items: center;
       flex-direction: row;
 
+      border: none;
+
       li {
+        border: none;
+
         a {
-          border: none;
           width: inherit;
           height: 5rem;
           line-height: 5rem;
+
+          color: ${({ windowPosition }) =>
+            windowPosition >= 150 ? 'var(--text)' : '#FFFFFF'};
 
           &:hover {
             color: var(--text);
@@ -171,6 +203,7 @@ export const Navigation = styled.nav<NavigationProps>`
 
 interface MenuButtonProps {
   menuIsOpen: boolean;
+  windowPosition: number;
 }
 
 export const MenuButton = styled.button<MenuButtonProps>`
@@ -185,7 +218,8 @@ export const MenuButton = styled.button<MenuButtonProps>`
 
     height: 0.25rem;
 
-    background-color: #ffffff;
+    background-color: ${({ windowPosition, menuIsOpen }) =>
+      windowPosition >= 150 || menuIsOpen ? 'var(--text)' : '#FFFFFF'};
 
     transform-origin: 1px 2 px;
     transition: all 0.2s ease-in-out;

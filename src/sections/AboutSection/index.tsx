@@ -2,7 +2,7 @@ import { Container, AboutText } from './styles';
 
 export const AboutSection = (): JSX.Element => {
   return (
-    <Container id="#about">
+    <Container id="about">
       <h2>ABOUT</h2>
 
       <div>

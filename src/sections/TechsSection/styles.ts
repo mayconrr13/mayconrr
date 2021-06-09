@@ -28,6 +28,12 @@ export const Container = styled.section`
     width: 100%;
     max-width: 1180px;
   }
+
+  @media (max-width: 350px) {
+    ul {
+      justify-content: center;
+    }
+  }
 `;
 
 export const TechItem = styled.li`
@@ -37,14 +43,14 @@ export const TechItem = styled.li`
   justify-content: space-around;
 
   position: relative;
-  margin: 5rem 1rem 0 1rem;
+  margin: 5rem 0 0 0;
 
   list-style-type: none;
 
   width: 150px;
   height: 150px;
 
-  transition: padding 0.2s linear;
+  transition: all 0.2s linear;
 
   &:hover {
     padding: 1.5rem;
@@ -102,6 +108,14 @@ export const TechItem = styled.li`
     color: var(--text);
     font-size: 1rem;
     text-align: center;
+  }
+
+  @media (min-width: 500px) {
+    margin: 5rem 0.5rem 0 0.5rem;
+  }
+
+  @media (min-width: 650px) {
+    margin: 5rem 1rem 0 1rem;
   }
 
   @media (min-width: 750px) {

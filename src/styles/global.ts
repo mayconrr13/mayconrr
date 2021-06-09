@@ -29,11 +29,15 @@ export const GlobalStyle = createGlobalStyle`
     --gray-2: #DDDDDD;
     --gray-3: #AAAAAA;
     --background-2: #EFEFEF;
-    --background: ##FFFFFF;
+    --background: #FFFFFF;
 
     --primary: #e89c00;
     --primary-t50: #e89c0050;
   } */
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     background: var(--background);

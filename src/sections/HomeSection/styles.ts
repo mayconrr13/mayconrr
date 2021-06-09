@@ -27,7 +27,7 @@ export const Container = styled.section`
   }
 
   p {
-    color: var(--text);
+    color: #ffffff;
     font-size: 1.5rem;
     font-weight: 400;
   }
