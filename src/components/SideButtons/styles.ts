@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.aside`
-  position: static;
-
   display: none;
   flex-direction: column;
   align-items: center;
@@ -46,10 +44,6 @@ export const Container = styled.aside`
   }
 
   @media (min-width: 900px) {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
