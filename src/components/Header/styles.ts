@@ -23,7 +23,7 @@ export const Container = styled.header<HeaderProps>`
     windowPosition >= 150
       ? css`
           background-color: var(--background);
-          filter: drop-shadow(5px 5px 10px #36363690);
+          filter: drop-shadow(5px 5px 5px #00000025);
         `
       : css`
           background-color: transparent;
@@ -62,7 +62,10 @@ export const Container = styled.header<HeaderProps>`
 interface NavigationProps {
   menuIsOpen: boolean;
   windowPosition: number;
+  activeSection: string;
 }
+
+const sections = ['home', 'about', 'techs', 'projects', 'contact'];
 
 export const Navigation = styled.nav<NavigationProps>`
   height: 100vh;
@@ -113,6 +116,15 @@ export const Navigation = styled.nav<NavigationProps>`
         color: var(--text);
 
         &:hover {
+          color: var(--primary);
+          font-weight: 700;
+        }
+      }
+
+      //styling active link
+      &:nth-child(${({ activeSection }) =>
+            sections.findIndex(section => section === activeSection) + 1}) {
+        a {
           color: var(--primary);
           font-weight: 700;
         }
@@ -173,7 +185,8 @@ export const Navigation = styled.nav<NavigationProps>`
             windowPosition >= 150 ? 'var(--text)' : '#FFFFFF'};
 
           &:hover {
-            color: var(--text);
+            color: ${({ windowPosition }) =>
+              windowPosition >= 150 ? 'var(--text)' : '#FFFFFF'};
             position: relative;
 
             &:after {
@@ -191,6 +204,27 @@ export const Navigation = styled.nav<NavigationProps>`
 
         & + li {
           margin-left: 3rem;
+        }
+
+        //styling active link
+        &:nth-child(${({ activeSection }) =>
+              sections.findIndex(section => section === activeSection) + 1}) {
+          a {
+            color: ${({ windowPosition }) =>
+              windowPosition >= 150 ? 'var(--text)' : '#FFFFFF'};
+            position: relative;
+
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 1px;
+              left: 0;
+              width: 100%;
+              height: 0.25rem;
+              background-color: var(--primary);
+              border-radius: 2px;
+            }
+          }
         }
       }
     }

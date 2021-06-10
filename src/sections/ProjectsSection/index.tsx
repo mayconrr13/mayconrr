@@ -1,8 +1,22 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container, ProjectItem } from './styles';
 
 export const ProjectsSection = (): JSX.Element => {
+  const { handleActiveSection } = useActiveSection();
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveSection('projects');
+    }
+  }, [inView, handleActiveSection]);
+
   return (
-    <Container id="projects">
+    <Container id="projects" ref={ref}>
       <h2>PROJECTS</h2>
 
       <div>

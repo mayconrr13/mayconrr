@@ -1,8 +1,22 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container } from './styles';
 
 export const ContactSection = (): JSX.Element => {
+  const { handleActiveSection } = useActiveSection();
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveSection('contact');
+    }
+  }, [inView, handleActiveSection]);
+
   return (
-    <Container id="contact">
+    <Container id="contact" ref={ref}>
       <img src="/contact-bg.jpg" alt="Coding" />
 
       <div>

@@ -1,9 +1,23 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { ScrollSign } from '../../components/ScrollSign';
+import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container } from './styles';
 
 export const HomeSection = (): JSX.Element => {
+  const { handleActiveSection } = useActiveSection();
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveSection('home');
+    }
+  }, [inView, handleActiveSection]);
+
   return (
-    <Container id="home">
+    <Container id="home" ref={ref}>
       <img src="/home-bg.jpg" alt="Home" />
 
       <p>Hi there! I&apos;m</p>

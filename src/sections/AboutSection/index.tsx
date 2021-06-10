@@ -1,8 +1,22 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container, AboutText } from './styles';
 
 export const AboutSection = (): JSX.Element => {
+  const { handleActiveSection } = useActiveSection();
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      handleActiveSection('about');
+    }
+  }, [inView, handleActiveSection]);
+
   return (
-    <Container id="about">
+    <Container id="about" ref={ref}>
       <h2>ABOUT</h2>
 
       <div>

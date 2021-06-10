@@ -4,8 +4,12 @@ import Link from 'next/link';
 import { SideButtons } from '../SideButtons';
 
 import { Container, Navigation, MenuButton } from './styles';
+import { useActiveSection } from '../../hooks/useActiveSection';
+
+const sections = ['home', 'about', 'techs', 'projects', 'contact'];
 
 export const Header = (): JSX.Element => {
+  const { activeSection } = useActiveSection();
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const [windowYPosition, setWindowYPosition] = useState<number>(0);
 
@@ -29,6 +33,7 @@ export const Header = (): JSX.Element => {
         <Navigation
           menuIsOpen={menuIsOpen}
           windowPosition={windowYPosition}
+          activeSection={activeSection}
           onClick={() => setMenuIsOpen(false)}
         >
           <ul>
