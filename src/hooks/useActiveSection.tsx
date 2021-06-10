@@ -15,18 +15,16 @@ interface ActiveSectionProviderProps {
   children: ReactNode;
 }
 
-const sections = ['home', 'about', 'techs', 'projects', 'contact'];
-
 const ActiveSectionContext = createContext({} as ActiveSectionContextProps);
 
 export const ActiveSectionProvider = ({
   children,
 }: ActiveSectionProviderProps): JSX.Element => {
   const [activeSection, setActiveSection] = useState<string>('home');
-  console.log(activeSection);
 
   useEffect(() => {
     setActiveSection(activeSection);
+    console.log(activeSection);
   }, [activeSection]);
 
   return (

@@ -2,7 +2,7 @@ import { Container } from './styles';
 
 export const SideButtons = (): JSX.Element => {
   return (
-    <Container>
+    <Container style={{ display: 'none' }}>
       <button type="button">
         <img src="/icons/sun.svg" alt="Light" />
       </button>

@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { ProjectModal } from '../../components/ProjectModal';
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container, ProjectItem } from './styles';
 
 export const ProjectsSection = (): JSX.Element => {
   const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.25,
   });
 
   useEffect(() => {
@@ -73,6 +74,8 @@ export const ProjectsSection = (): JSX.Element => {
           </div>
         </ProjectItem>
       </div>
+
+      <ProjectModal />
     </Container>
   );
 };

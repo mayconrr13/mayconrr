@@ -96,6 +96,7 @@ export const Navigation = styled.nav<NavigationProps>`
     li {
       width: 100%;
       list-style-type: none;
+      cursor: pointer;
 
       & + li {
         border-top: 1px solid #363636;
