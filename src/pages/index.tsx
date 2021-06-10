@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Header } from '../components/Header';
 import { SideButtons } from '../components/SideButtons';
 import { AboutSection } from '../sections/AboutSection';
+import { ContactSection } from '../sections/ContactSection';
 import { HomeSection } from '../sections/HomeSection';
 import { ProjectsSection } from '../sections/ProjectsSection';
 import { TechSection } from '../sections/TechsSection';
@@ -21,6 +22,7 @@ export default function Home(): JSX.Element {
       <AboutSection />
       <TechSection />
       <ProjectsSection />
+      <ContactSection />
 
       <SideButtons />
     </Container>
