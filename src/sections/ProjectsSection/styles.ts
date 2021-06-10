@@ -32,6 +32,12 @@ export const Container = styled.section`
     padding: 0 1.5rem;
     margin-top: 5rem;
   }
+
+  @media (min-width: 900px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
 `;
 
 export const ProjectItem = styled.article`
@@ -137,7 +143,5 @@ export const ProjectItem = styled.article`
   @media (min-width: 1050px) {
     width: 32%;
     padding-top: 32%;
-    /* width: calc((100% / 3) - (2 * 1.25rem));
-    padding-top: calc((100% / 3) - (2 * 1.25rem)); */
   }
 `;

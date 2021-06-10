@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     --background: #1D1D1D;
 
     --primary: #FFAD05;
-    --primary-t50: #FFAD0550;
+    --primary-t50: #FFAD0590;
   }
 
   //light

@@ -34,6 +34,12 @@ export const Container = styled.section`
       justify-content: center;
     }
   }
+
+  @media (min-width: 900px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
 `;
 
 export const TechItem = styled.li`

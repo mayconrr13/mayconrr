@@ -10,10 +10,10 @@ export const ContactSection = (): JSX.Element => {
           <h2>CONTACT</h2>
 
           <strong>E-MAIL</strong>
-          <span>mayconrr13@gmail.com</span>
+          <a href="mailto:mayconrr13@gmail.com">mayconrr13@gmail.com</a>
 
           <strong>WHATSAPP</strong>
-          <span>(62) 9 9963-1103</span>
+          <a href="https://wa.me/15562999631103">(62) 9 9963-1103</a>
 
           <strong>SOCIAL MEDIA</strong>
           <div>

@@ -28,7 +28,7 @@ export const Container = styled.section`
 
     > section {
       max-width: 480px;
-      padding: 6rem 6rem;
+      padding: 6rem 1.5rem;
       margin-left: auto;
 
       display: flex;
@@ -53,7 +53,7 @@ export const Container = styled.section`
         margin-bottom: 0.375rem;
       }
 
-      span {
+      > a {
         font-size: 1rem;
         color: #ffffff;
 
@@ -84,16 +84,18 @@ export const Container = styled.section`
   @media (min-width: 500px) {
     > div {
       > section {
+        padding: 6rem 6rem;
+
         h2 {
           font-size: 3rem;
         }
 
         strong,
-        span {
+        > a {
           font-size: 1.5rem;
         }
 
-        span {
+        > a {
           margin-bottom: 2rem;
         }
       }
