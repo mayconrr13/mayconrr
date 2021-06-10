@@ -74,6 +74,8 @@ export const ProjectDetails = styled.section`
     font-size: 1.25rem;
     color: var(--text);
     line-height: 1.75rem;
+
+    margin-bottom: 1.5rem;
   }
 
   > div {
@@ -85,7 +87,7 @@ export const ProjectDetails = styled.section`
 
     width: 100%;
 
-    button {
+    a {
       border: none;
       background-color: transparent;
 

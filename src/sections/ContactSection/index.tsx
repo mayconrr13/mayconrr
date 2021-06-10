@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSection } from '../../hooks/useActiveSection';
@@ -15,12 +16,25 @@ export const ContactSection = (): JSX.Element => {
     }
   }, [inView, setActiveSection]);
 
+  const fadeLeft = {
+    opacity: [0, 1],
+    x: [30, 0],
+  };
+
+  const exitRight = {
+    opacity: [1, 0],
+    x: [0, 30],
+  };
+
   return (
     <Container id="contact" ref={ref}>
       <img src="/contact-bg.jpg" alt="Coding" />
 
       <div>
-        <section>
+        <motion.section
+          animate={inView ? fadeLeft : exitRight}
+          transition={{ delay: 0.2 }}
+        >
           <h2>CONTACT</h2>
 
           <strong>E-MAIL</strong>
@@ -41,7 +55,7 @@ export const ContactSection = (): JSX.Element => {
               <img src="/icons/instagram.svg" alt="Instagram" />
             </a>
           </div>
-        </section>
+        </motion.section>
       </div>
     </Container>
   );

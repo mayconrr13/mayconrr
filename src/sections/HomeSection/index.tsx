@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ScrollSign } from '../../components/ScrollSign';
@@ -16,15 +17,33 @@ export const HomeSection = (): JSX.Element => {
     }
   }, [inView, setActiveSection]);
 
+  const fadeUp = {
+    opacity: [0, 1],
+    y: [30, 0],
+  };
+
+  const fadeDown = {
+    opacity: [0, 1],
+    y: [0, 30],
+  };
+
   return (
     <Container id="home" ref={ref}>
       <img src="/home-bg.jpg" alt="Home" />
 
-      <p>Hi there! I&apos;m</p>
-      <h1>MAYCON</h1>
-      <span>FRONT-END DEVELOPER</span>
+      <motion.p animate={fadeDown} transition={{ delay: 0.2 }}>
+        Hi there! I&apos;m
+      </motion.p>
 
-      <div>
+      <motion.h1 animate={fadeUp} transition={{ delay: 1 }}>
+        MAYCON
+      </motion.h1>
+
+      <motion.span animate={fadeUp} transition={{ delay: 1.2 }}>
+        FRONT-END DEVELOPER
+      </motion.span>
+
+      <motion.div animate={fadeUp} transition={{ delay: 1.5 }}>
         <a href="https://github.com/mayconrr13">
           <img src="/icons/github.svg" alt="GitHub" />
         </a>
@@ -34,7 +53,7 @@ export const HomeSection = (): JSX.Element => {
         <a href="https://www.instagram.com/_mayconrr/">
           <img src="/icons/instagram.svg" alt="Instagram" />
         </a>
-      </div>
+      </motion.div>
 
       <ScrollSign />
     </Container>

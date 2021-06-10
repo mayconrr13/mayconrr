@@ -26,21 +26,28 @@ export const AboutSection = (): JSX.Element => {
           <h3>Hey! What&apos;s up?</h3>
 
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, When an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived
-            not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged.
+            I&apos;m a front end developer passionate about technology. Since
+            august of 2020, I start to learn how to coding with JavaScript and
+            after that I discovered the web development world and came studing
+            about that since then.
           </p>
           <p>
-            It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            {' '}
+            At the beggining of 2021, I dicided to focus at front end,
+            increasing my abilities with HTML, CSS, JS and ReactJS. In March of
+            the same year I dicided to take a big step in my studies and my
+            future carrear by joining Rocketseat&apos;s bootcamp IGNITE, on
+            ReactJS trail.
+          </p>
+          <p>
+            Since then, I&apos;m focusing on absorve all the knowedge that I can
+            and develop small projects to create my own portifolio and, one day,
+            finally get my first job.
           </p>
 
-          <button type="button">DOWNLOAD CV</button>
+          <a href="/files/CV_Maycon_Reis_Rosario.pdf" download>
+            DOWNLOAD CV
+          </a>
         </AboutText>
       </div>
     </Container>

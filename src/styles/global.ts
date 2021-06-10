@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
 
     --primary: #FFAD05;
     --primary-t50: #FFAD0590;
+    --primary-t100: #FFAD05bb;
   }
 
   //light

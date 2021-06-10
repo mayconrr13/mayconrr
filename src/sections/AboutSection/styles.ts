@@ -88,7 +88,7 @@ export const AboutText = styled.section`
     line-height: 1.75rem;
   }
 
-  button {
+  a {
     width: 240px;
     height: 3.75rem;
 
@@ -101,6 +101,14 @@ export const AboutText = styled.section`
     color: var(--text);
     font-size: 1.25rem;
     font-weight: 700;
+    line-height: 3.75rem;
+    text-align: center;
+
+    transition: filter linear 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 
   @media (min-width: 900px) {
@@ -113,7 +121,7 @@ export const AboutText = styled.section`
       line-height: 1.875rem;
     }
 
-    button {
+    a {
       margin-left: 0;
       font-size: 1.25rem;
     }
