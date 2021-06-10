@@ -1,10 +1,13 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ProjectModal } from '../../components/ProjectModal';
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container, ProjectItem } from './styles';
 
 export const ProjectsSection = (): JSX.Element => {
+  const [projectModalIsOpen, setProjectModalIsOpen] = useState<boolean>(false);
+  const [projectId, setProjectId] = useState<number>(0);
+
   const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
     threshold: 0.25,
@@ -15,6 +18,15 @@ export const ProjectsSection = (): JSX.Element => {
       setActiveSection('projects');
     }
   }, [inView, setActiveSection]);
+
+  const handleOpenModal = useCallback((id: number) => {
+    setProjectModalIsOpen(true);
+    setProjectId(id);
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setProjectModalIsOpen(false);
+  }, []);
 
   return (
     <Container id="projects" ref={ref}>
@@ -31,7 +43,9 @@ export const ProjectsSection = (): JSX.Element => {
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum
             </p>
-            <button type="button">+</button>
+            <button type="button" onClick={() => handleOpenModal(1)}>
+              +
+            </button>
           </div>
         </ProjectItem>
         <ProjectItem>
@@ -44,7 +58,9 @@ export const ProjectsSection = (): JSX.Element => {
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum
             </p>
-            <button type="button">+</button>
+            <button type="button" onClick={() => handleOpenModal(2)}>
+              +
+            </button>
           </div>
         </ProjectItem>
         <ProjectItem>
@@ -57,7 +73,9 @@ export const ProjectsSection = (): JSX.Element => {
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum
             </p>
-            <button type="button">+</button>
+            <button type="button" onClick={() => handleOpenModal(3)}>
+              +
+            </button>
           </div>
         </ProjectItem>
         <ProjectItem>
@@ -70,12 +88,18 @@ export const ProjectsSection = (): JSX.Element => {
               It was popularised in the 1960s with the release of Letraset
               sheets containing Lorem Ipsum
             </p>
-            <button type="button">+</button>
+            <button type="button" onClick={() => handleOpenModal(4)}>
+              +
+            </button>
           </div>
         </ProjectItem>
       </div>
 
-      <ProjectModal />
+      <ProjectModal
+        isOpen={projectModalIsOpen}
+        onRequestClose={handleCloseModal}
+        projectId={projectId}
+      />
     </Container>
   );
 };

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.article`
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   position: relative;
@@ -9,7 +10,8 @@ export const Container = styled.article`
 
   width: 100%;
   max-width: 1180px;
-  height: 600px;
+
+  overflow: hidden;
 
   > button {
     position: absolute;
@@ -34,8 +36,7 @@ export const Container = styled.article`
 
 export const ImageSection = styled.section`
   width: 600px;
-  height: 100%;
-  max-height: 600px;
+  height: 600px;
 
   > div {
     width: 100%;
@@ -51,7 +52,7 @@ export const ImageSection = styled.section`
 
 export const ProjectDetails = styled.section`
   flex: 1;
-  height: 100%;
+  min-height: 600px;
 
   padding: 3rem;
   background-color: var(--background);
