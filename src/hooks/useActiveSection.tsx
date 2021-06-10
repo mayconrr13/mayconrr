@@ -1,7 +1,6 @@
 import {
   createContext,
   ReactNode,
-  useCallback,
   useContext,
   useEffect,
   useState,
@@ -9,7 +8,7 @@ import {
 
 interface ActiveSectionContextProps {
   activeSection: string;
-  handleActiveSection: (active: string) => void;
+  setActiveSection: (section: string) => void;
 }
 
 interface ActiveSectionProviderProps {
@@ -24,24 +23,14 @@ export const ActiveSectionProvider = ({
   children,
 }: ActiveSectionProviderProps): JSX.Element => {
   const [activeSection, setActiveSection] = useState<string>('home');
-
-  const handleActiveSection = useCallback(
-    (section: string) => {
-      console.log(sections.findIndex(item => item === activeSection) + 1);
-      setActiveSection(section);
-    },
-    [activeSection]
-  );
+  console.log(activeSection);
 
   useEffect(() => {
-    handleActiveSection(activeSection);
-    console.log(activeSection);
-  }, [activeSection, handleActiveSection]);
+    setActiveSection(activeSection);
+  }, [activeSection]);
 
   return (
-    <ActiveSectionContext.Provider
-      value={{ activeSection, handleActiveSection }}
-    >
+    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
       {children}
     </ActiveSectionContext.Provider>
   );

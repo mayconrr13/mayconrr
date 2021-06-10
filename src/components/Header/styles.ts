@@ -62,10 +62,7 @@ export const Container = styled.header<HeaderProps>`
 interface NavigationProps {
   menuIsOpen: boolean;
   windowPosition: number;
-  activeSection: string;
 }
-
-const sections = ['home', 'about', 'techs', 'projects', 'contact'];
 
 export const Navigation = styled.nav<NavigationProps>`
   height: 100vh;
@@ -83,7 +80,7 @@ export const Navigation = styled.nav<NavigationProps>`
   right: 0;
   z-index: 998;
 
-  transition: all 1s;
+  transition: all 0.3s;
 
   opacity: ${({ menuIsOpen }) => (menuIsOpen ? 1 : 0)};
   transform: translateX(${({ menuIsOpen }) => (menuIsOpen ? '0' : '300px')});
@@ -122,8 +119,7 @@ export const Navigation = styled.nav<NavigationProps>`
       }
 
       //styling active link
-      &:nth-child(${({ activeSection }) =>
-            sections.findIndex(section => section === activeSection) + 1}) {
+      &.active {
         a {
           color: var(--primary);
           font-weight: 700;
@@ -207,8 +203,7 @@ export const Navigation = styled.nav<NavigationProps>`
         }
 
         //styling active link
-        &:nth-child(${({ activeSection }) =>
-              sections.findIndex(section => section === activeSection) + 1}) {
+        &.active {
           a {
             color: ${({ windowPosition }) =>
               windowPosition >= 150 ? 'var(--text)' : '#FFFFFF'};

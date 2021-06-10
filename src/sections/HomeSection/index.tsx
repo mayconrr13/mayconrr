@@ -5,16 +5,16 @@ import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container } from './styles';
 
 export const HomeSection = (): JSX.Element => {
-  const { handleActiveSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
 
   useEffect(() => {
     if (inView) {
-      handleActiveSection('home');
+      setActiveSection('home');
     }
-  }, [inView, handleActiveSection]);
+  }, [inView, setActiveSection]);
 
   return (
     <Container id="home" ref={ref}>

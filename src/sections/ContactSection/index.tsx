@@ -4,16 +4,16 @@ import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container } from './styles';
 
 export const ContactSection = (): JSX.Element => {
-  const { handleActiveSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
 
   useEffect(() => {
     if (inView) {
-      handleActiveSection('contact');
+      setActiveSection('contact');
     }
-  }, [inView, handleActiveSection]);
+  }, [inView, setActiveSection]);
 
   return (
     <Container id="contact" ref={ref}>

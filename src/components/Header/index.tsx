@@ -6,8 +6,6 @@ import { SideButtons } from '../SideButtons';
 import { Container, Navigation, MenuButton } from './styles';
 import { useActiveSection } from '../../hooks/useActiveSection';
 
-const sections = ['home', 'about', 'techs', 'projects', 'contact'];
-
 export const Header = (): JSX.Element => {
   const { activeSection } = useActiveSection();
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -33,31 +31,30 @@ export const Header = (): JSX.Element => {
         <Navigation
           menuIsOpen={menuIsOpen}
           windowPosition={windowYPosition}
-          activeSection={activeSection}
           onClick={() => setMenuIsOpen(false)}
         >
           <ul>
-            <li>
+            <li className={activeSection === 'home' ? 'active' : ''}>
               <Link href="#home">
                 <a>HOME</a>
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'about' ? 'active' : ''}>
               <Link href="#about">
                 <a>ABOUT</a>
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'techs' ? 'active' : ''}>
               <Link href="#techs">
                 <a>TECHS</a>
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'projects' ? 'active' : ''}>
               <Link href="#projects">
                 <a>PROJECTS</a>
               </Link>
             </li>
-            <li>
+            <li className={activeSection === 'contact' ? 'active' : ''}>
               <Link href="#contact">
                 <a>CONTACT</a>
               </Link>

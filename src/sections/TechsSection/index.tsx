@@ -6,16 +6,16 @@ import { useActiveSection } from '../../hooks/useActiveSection';
 import { Container, TechItem } from './styles';
 
 export const TechSection = (): JSX.Element => {
-  const { handleActiveSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
     threshold: 0.4,
   });
 
   useEffect(() => {
     if (inView) {
-      handleActiveSection('techs');
+      setActiveSection('techs');
     }
-  }, [inView, handleActiveSection]);
+  }, [inView, setActiveSection]);
 
   return (
     <Container id="techs" ref={ref}>
