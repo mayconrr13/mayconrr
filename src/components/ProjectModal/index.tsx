@@ -19,6 +19,7 @@ export const ProjectModal = ({
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
+      ariaHideApp={false}
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
@@ -49,16 +50,18 @@ export const ProjectModal = ({
               <img src="/icons/github.svg" alt="GitHub" />
               <span>CODE</span>
             </a>
-            <a href={selectedProject.liveLink}>
-              <img src="/icons/link.svg" alt="Link" />
-              <span>DEMO</span>
-            </a>
+            {selectedProject.liveLink !== '' && (
+              <a href={selectedProject.liveLink}>
+                <img src="/icons/link.svg" alt="Link" />
+                <span>DEMO</span>
+              </a>
+            )}
           </div>
         </ProjectDetails>
 
         {/* close modal button */}
         <button type="button" onClick={onRequestClose}>
-          x
+          <img src="/icons/x.svg" alt="Fechar" />
         </button>
       </Container>
     </Modal>

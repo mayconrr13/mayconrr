@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
@@ -7,7 +8,7 @@ import { Container, Navigation, MenuButton } from './styles';
 import { useActiveSection } from '../../hooks/useActiveSection';
 
 export const Header = (): JSX.Element => {
-  const { activeSection } = useActiveSection();
+  const { activeSection, setActiveSection } = useActiveSection();
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const [windowYPosition, setWindowYPosition] = useState<number>(0);
 

@@ -8,7 +8,7 @@ import { Container, TechItem } from './styles';
 export const TechSection = (): JSX.Element => {
   const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.3,
   });
 
   useEffect(() => {

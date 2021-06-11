@@ -6,7 +6,7 @@ import { Container, AboutText } from './styles';
 export const AboutSection = (): JSX.Element => {
   const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
   });
 
   useEffect(() => {

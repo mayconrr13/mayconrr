@@ -24,7 +24,7 @@ export const HomeSection = (): JSX.Element => {
 
   const fadeDown = {
     opacity: [0, 1],
-    y: [0, 30],
+    y: [-30, 0],
   };
 
   return (

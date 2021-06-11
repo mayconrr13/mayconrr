@@ -15,28 +15,50 @@ export const Container = styled.article`
 
   > button {
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
 
     border: none;
-    background-color: transparent;
+    background-color: #ffffff10;
 
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     transition: all 0.2s ease-in-out;
+
+    img {
+      width: 1rem;
+      height: auto;
+    }
 
     &:hover {
       filter: brightness(0.8);
     }
   }
+
+  @media (min-width: 650px) {
+    > button {
+      top: 3rem;
+      right: 3rem;
+
+      width: 3rem;
+      height: 3rem;
+
+      img {
+        width: 1.5rem;
+      }
+    }
+  }
 `;
 
 export const ImageSection = styled.section`
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  padding-bottom: 0%;
 
   > div {
     width: 100%;
@@ -47,6 +69,11 @@ export const ImageSection = styled.section`
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  @media (min-width: 650px) {
+    width: 600px;
+    height: 600px;
   }
 `;
 
@@ -132,6 +159,35 @@ export const ProjectDetails = styled.section`
 
       background-color: var(--primary);
       color: #fff;
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding: 1.5rem;
+
+    strong {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    > div {
+      a {
+        span {
+          font-size: 1rem;
+        }
+        img {
+          width: 1.25rem;
+        }
+      }
+    }
+
+    section {
+      > span {
+        font-size: 0.875rem;
+      }
     }
   }
 `;

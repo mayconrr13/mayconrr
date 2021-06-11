@@ -35,7 +35,30 @@ export const GlobalStyle = createGlobalStyle`
 
     --primary: #e89c00;
     --primary-t50: #e89c0050;
+    --primary-t100: #e89c00bb;
   } */
+
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--gray-1);
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--gray-1);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 20px;
+    border: 3px solid orange;
+  }
+
 
   html {
     scroll-behavior: smooth;
@@ -70,7 +93,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .react-modal-overlay {
-    background: var(--background-t50);
+    background: #36363680;
 
     position: fixed;
     top: 0;
@@ -95,6 +118,8 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--background);
     position: relative;
     outline: none;
+
+    box-shadow: 4px 4px 4px 5px rgba(0, 0, 0, 0.2);
 
     @media (max-width: 650px) {
       width: 90vw;

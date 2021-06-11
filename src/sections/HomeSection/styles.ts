@@ -48,6 +48,8 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
 
+    opacity: 0;
+
     margin-top: 2rem;
 
     a {
