@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { ParallaxBanner } from 'react-scroll-parallax';
 import { ScrollSign } from '../../components/ScrollSign';
 import { useActiveSection } from '../../hooks/useActiveSection';
+import { fadeDown, fadeUp } from '../../utils/animations';
 import { Container } from './styles';
 
 export const HomeSection = (): JSX.Element => {
@@ -17,19 +19,22 @@ export const HomeSection = (): JSX.Element => {
     }
   }, [inView, setActiveSection]);
 
-  const fadeUp = {
-    opacity: [0, 1],
-    y: [30, 0],
-  };
-
-  const fadeDown = {
-    opacity: [0, 1],
-    y: [-30, 0],
-  };
-
   return (
     <Container id="home" ref={ref}>
-      <img src="/home-bg.jpg" alt="Home" />
+      {/* <img src="/home-bg.jpg" alt="Home" /> */}
+      <ParallaxBanner
+        layers={[
+          {
+            image: '/home-bg.jpg',
+            amount: 0.5,
+          },
+        ]}
+        style={{
+          height: '100px',
+        }}
+      >
+        <img src="/home-bg.jpg" alt="Home" />
+      </ParallaxBanner>
 
       <motion.p animate={fadeDown} transition={{ delay: 0.2 }}>
         Hi there! I&apos;m

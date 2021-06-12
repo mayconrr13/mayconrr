@@ -81,15 +81,15 @@ export const projects = [
     description:
       'Aplicação que permite conectar alunos a professores cadastrados na plataforma.',
     details:
-      'Está aplicação é a versão 2.0 do que foi desenvolvido na segunda edição da Next Level Week em agosto de 2020. Nesta nova versão foi adicionada a funcionalidade de cadastro e login para os professores que desejam disponilisar seus horários. A aplicação foi desenvolvida novamente do zero com foco principal no Front-end. Desta forma, a aplicação conta atualmente com um mock do back-end com o uso do JSON Server na criação de fake api. Atualmente a aplicação conta com uma lógica simples para simular a autenticação do usuário para que pudesse ser realizada toda a lógica de redirecionamento de páginas. O Próximo passo consiste em adicionar o Firebase na aplicação para utilizar os serviços de Autenticação e de Banco de dados para persistência dos dados de todos os professores além da criação de testes unitários para a aplicação.',
+      'Está aplicação é a versão 2.0 do que foi desenvolvido na segunda edição da Next Level Week em agosto de 2020. Nesta nova versão foi adicionada a funcionalidade de cadastro e login para os professores que desejam disponilisar seus horários. A aplicação foi desenvolvida novamente do zero com foco principal no Front-end. A parte do back-end foi criada com o Firebase com o uso dos serviços de Autenticação, Banco de dados e Storage para persistência dos dados de todos os professores cadastrados. O Próximo passo consiste a criação de testes unitários para a aplicação.',
     techs: [
       { id: 0, name: 'NextJS' },
       { id: 1, name: 'Styled Components' },
       { id: 2, name: 'Typescript' },
       { id: 3, name: 'React Hook Form' },
       { id: 4, name: 'Firebase' },
-      { id: 5, name: 'JEST' },
-      { id: 6, name: 'React Testing Library' },
+      // { id: 5, name: 'JEST' },
+      // { id: 6, name: 'React Testing Library' },
     ],
     repository: 'https://github.com/mayconrr13/proffy-2.0',
     liveLink: '',

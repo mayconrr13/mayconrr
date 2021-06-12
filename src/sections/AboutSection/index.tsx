@@ -1,11 +1,17 @@
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSection } from '../../hooks/useActiveSection';
+import { exitRight, fadeLeft } from '../../utils/animations';
 import { Container, AboutText } from './styles';
 
 export const AboutSection = (): JSX.Element => {
   const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+
+  const { ref: itemsRef, inView: itemsInView } = useInView({
     threshold: 0.4,
   });
 

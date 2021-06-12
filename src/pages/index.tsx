@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 import { Header } from '../components/Header';
 import { SideButtons } from '../components/SideButtons';
@@ -18,6 +19,20 @@ export default function Home(): JSX.Element {
       </Head>
 
       <Header />
+      <ParallaxBanner
+        layers={[
+          {
+            image: '/home-bg.jpg',
+            amount: 0.3,
+          },
+        ]}
+        style={{
+          position: 'absolute',
+          height: '100vh',
+          width: '100vw',
+        }}
+        className="home-parallax"
+      />
       <HomeSection />
       <AboutSection />
       <TechSection />
