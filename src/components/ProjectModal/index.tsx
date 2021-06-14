@@ -46,12 +46,20 @@ export const ProjectModal = ({
           <p>{selectedProject.details}</p>
 
           <div>
-            <a href={selectedProject.repository}>
+            <a
+              href={selectedProject.repository}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/icons/github.svg" alt="GitHub" />
               <span>CODE</span>
             </a>
             {selectedProject.liveLink !== '' && (
-              <a href={selectedProject.liveLink}>
+              <a
+                href={selectedProject.liveLink}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src="/icons/link.svg" alt="Link" />
                 <span>DEMO</span>
               </a>

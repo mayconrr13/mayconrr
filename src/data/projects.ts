@@ -34,7 +34,7 @@ export const projects = [
       { id: 5, name: 'Figma' },
     ],
     repository: 'https://github.com/mayconrr13/corona-tracker',
-    liveLink: '',
+    liveLink: 'https://corona-tracker-mr.vercel.app/',
   },
   {
     id: 2,
@@ -92,6 +92,6 @@ export const projects = [
       // { id: 6, name: 'React Testing Library' },
     ],
     repository: 'https://github.com/mayconrr13/proffy-2.0',
-    liveLink: '',
+    liveLink: 'https://proffy-2-0.vercel.app/',
   },
 ];

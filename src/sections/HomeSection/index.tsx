@@ -21,7 +21,6 @@ export const HomeSection = (): JSX.Element => {
 
   return (
     <Container id="home" ref={ref}>
-      {/* <img src="/home-bg.jpg" alt="Home" /> */}
       <ParallaxBanner
         layers={[
           {
@@ -30,7 +29,8 @@ export const HomeSection = (): JSX.Element => {
           },
         ]}
         style={{
-          height: '100px',
+          position: 'absolute',
+          height: '100vh',
         }}
       >
         <img src="/home-bg.jpg" alt="Home" />
@@ -49,13 +49,25 @@ export const HomeSection = (): JSX.Element => {
       </motion.span>
 
       <motion.div animate={fadeUp} transition={{ delay: 1.5 }}>
-        <a href="https://github.com/mayconrr13">
+        <a
+          href="https://github.com/mayconrr13"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src="/icons/github.svg" alt="GitHub" />
         </a>
-        <a href="https://www.linkedin.com/in/mayconreisrosario/">
+        <a
+          href="https://www.linkedin.com/in/mayconreisrosario/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src="/icons/linkedin.svg" alt="Linkedin" />
         </a>
-        <a href="https://www.instagram.com/_mayconrr/">
+        <a
+          href="https://www.instagram.com/_mayconrr/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src="/icons/instagram.svg" alt="Instagram" />
         </a>
       </motion.div>

@@ -51,10 +51,6 @@ export const ProjectItem = styled.article`
     div {
       opacity: 1;
     }
-
-    img {
-      /* filter: grayscale(); */
-    }
   }
 
   img {
@@ -76,7 +72,7 @@ export const ProjectItem = styled.article`
     left: 0;
     z-index: 2;
 
-    background-color: var(--primary-t100);
+    background-color: var(--primary);
 
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -96,7 +92,7 @@ export const ProjectItem = styled.article`
 
     opacity: 0;
 
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
     transition-delay: 0.1s;
 
     padding: 1rem;
