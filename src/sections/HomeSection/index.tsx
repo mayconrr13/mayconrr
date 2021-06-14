@@ -37,7 +37,7 @@ export const HomeSection = (): JSX.Element => {
       </ParallaxBanner>
 
       <motion.p animate={fadeDown} transition={{ delay: 0.2 }}>
-        Hi there! I&apos;m
+        Olá pessoal! Eu sou
       </motion.p>
 
       <motion.h1 animate={fadeUp} transition={{ delay: 1 }}>
@@ -45,7 +45,7 @@ export const HomeSection = (): JSX.Element => {
       </motion.h1>
 
       <motion.span animate={fadeUp} transition={{ delay: 1.2 }}>
-        FRONT-END DEVELOPER
+        DESENVOLVEDOR FRONT-END
       </motion.span>
 
       <motion.div animate={fadeUp} transition={{ delay: 1.5 }}>

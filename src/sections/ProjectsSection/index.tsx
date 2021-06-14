@@ -31,7 +31,7 @@ export const ProjectsSection = (): JSX.Element => {
 
   return (
     <Container id="projects" ref={ref}>
-      <h2>PROJECTS</h2>
+      <h2>PROJETOS</h2>
 
       <div>
         {projects.map(project => {

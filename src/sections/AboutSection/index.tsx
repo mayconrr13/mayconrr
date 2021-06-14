@@ -1,17 +1,11 @@
-import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSection } from '../../hooks/useActiveSection';
-import { exitRight, fadeLeft } from '../../utils/animations';
 import { Container, AboutText } from './styles';
 
 export const AboutSection = (): JSX.Element => {
   const { setActiveSection } = useActiveSection();
   const { ref, inView } = useInView({
-    threshold: 0.4,
-  });
-
-  const { ref: itemsRef, inView: itemsInView } = useInView({
     threshold: 0.4,
   });
 
@@ -23,32 +17,28 @@ export const AboutSection = (): JSX.Element => {
 
   return (
     <Container id="about" ref={ref}>
-      <h2>ABOUT</h2>
+      <h2>SOBRE</h2>
 
       <div>
         <div />
 
         <AboutText>
-          <h3>Hey! What&apos;s up?</h3>
+          <h3>Olá!</h3>
 
           <p>
-            I&apos;m a front end developer passionate about technology. Since
-            august of 2020, I start to learn how to coding with JavaScript and
-            after that I discovered the web development world and came studing
-            about that since then.
+            Sou Maycon, mestrando em engenharia de estruturas pela EESC-USP e
+            apaixonado pelo mundo da tecnologia. No meu tempo livre gosto de
+            assistir um bom filme e, também, aproveitar para me atualizar e
+            desafiar na execução de novos projetos.
           </p>
           <p>
-            {' '}
-            At the beggining of 2021, I dicided to focus at front end,
-            increasing my abilities with HTML, CSS, JS and ReactJS. In March of
-            the same year I dicided to take a big step in my studies and my
-            future carrear by joining Rocketseat&apos;s bootcamp IGNITE, on
-            ReactJS trail.
-          </p>
-          <p>
-            Since then, I&apos;m focusing on absorve all the knowedge that I can
-            and develop small projects to create my own portifolio and, one day,
-            finally get my first job.
+            Atualmente estou focado no desenvolmento web voltado para o
+            front-end com o uso de ReactJS e Typescript. Após a participação em
+            bootcamp, compreendi e apliquei em projetos pessoais o conjunto de
+            boas práticas que envolvem o front-end com o uso do NextJS em
+            conjunto com alternativas de backend como o Firebase e o FaunaDB na
+            criação de aplicações modenas, perfomáticas e com escopo mais
+            definido.
           </p>
 
           <a href="/files/CV_Maycon_Reis_Rosario.pdf" download>

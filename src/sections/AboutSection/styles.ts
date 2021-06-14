@@ -86,6 +86,11 @@ export const AboutText = styled.section`
     font-weight: 400;
     color: var(--text);
     line-height: 1.75rem;
+    text-align: justify;
+
+    & + p {
+      margin-top: 0.5rem;
+    }
   }
 
   a {

@@ -42,7 +42,7 @@ export const ContactSection = (): JSX.Element => {
           animate={inView ? fadeLeft : exitRight}
           transition={{ delay: 0.2 }}
         >
-          <h2>CONTACT</h2>
+          <h2>CONTATO</h2>
 
           <strong>E-MAIL</strong>
           <a href="mailto:mayconrr13@gmail.com">mayconrr13@gmail.com</a>
@@ -50,7 +50,7 @@ export const ContactSection = (): JSX.Element => {
           <strong>WHATSAPP</strong>
           <a href="https://wa.me/15562999631103">(62) 9 9963-1103</a>
 
-          <strong>SOCIAL MEDIA</strong>
+          <strong>REDES SOCIAIS</strong>
           <div>
             <a
               href="https://github.com/mayconrr13"

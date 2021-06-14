@@ -8,7 +8,7 @@ import { Container, Navigation, MenuButton } from './styles';
 import { useActiveSection } from '../../hooks/useActiveSection';
 
 export const Header = (): JSX.Element => {
-  const { activeSection, setActiveSection } = useActiveSection();
+  const { activeSection } = useActiveSection();
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
   const [windowYPosition, setWindowYPosition] = useState<number>(0);
 
@@ -42,7 +42,7 @@ export const Header = (): JSX.Element => {
             </li>
             <li className={activeSection === 'about' ? 'active' : ''}>
               <Link href="#about">
-                <a>ABOUT</a>
+                <a>SOBRE</a>
               </Link>
             </li>
             <li className={activeSection === 'techs' ? 'active' : ''}>
@@ -52,12 +52,12 @@ export const Header = (): JSX.Element => {
             </li>
             <li className={activeSection === 'projects' ? 'active' : ''}>
               <Link href="#projects">
-                <a>PROJECTS</a>
+                <a>PROJETOS</a>
               </Link>
             </li>
             <li className={activeSection === 'contact' ? 'active' : ''}>
               <Link href="#contact">
-                <a>CONTACT</a>
+                <a>CONTATO</a>
               </Link>
             </li>
           </ul>
