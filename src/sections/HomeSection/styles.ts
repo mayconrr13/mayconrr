@@ -30,18 +30,21 @@ export const Container = styled.section`
     color: #ffffff;
     font-size: 1.5rem;
     font-weight: 400;
+    opacity: 0;
   }
 
   h1 {
     color: var(--primary);
     font-size: 4rem;
     font-weight: 800;
+    opacity: 0;
   }
 
   span {
     color: var(--gray-2);
     font-size: 1rem;
     font-weight: 400;
+    opacity: 0;
   }
 
   > div {
