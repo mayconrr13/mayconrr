@@ -24,7 +24,6 @@ export const ActiveSectionProvider = ({
 
   useEffect(() => {
     setActiveSection(activeSection);
-    console.log(activeSection);
   }, [activeSection]);
 
   return (
