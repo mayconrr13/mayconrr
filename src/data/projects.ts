@@ -1,12 +1,12 @@
 export const projects = [
   {
     id: 0,
-    name: 'Web Portifólio',
-    imagePath: '/projects/web-portifolio.jpg',
+    name: 'Web Portfólio',
+    imagePath: '/projects/mayconrr.jpg',
     description:
       'Site criado para apresentação pessoal e de projetos desenvolvidos.',
     details:
-      'O WEB PORTIFÓLIO compreende o meu portifólio digital, onde falo um pouco sobre mim, minha trajetória, tecnologias utilizadas no dia a dia e projetos pessoais desenvolvidos. Para isso, o projeto foi criado do completo zero através da definição da interface com o Figma e construído com a premissa de Mobile First. O portifólio foi desenvolvido com o NextJS e Styled Components em conjunto com Typescript.',
+      'O WEB PORTFÓLIO compreende o meu portfólio digital, onde falo um pouco sobre mim, minha trajetória, tecnologias utilizadas no dia a dia e projetos pessoais desenvolvidos. Para isso, o projeto foi criado do completo zero através da definição da interface com o Figma e construído com a premissa de Mobile First. O portifólio foi desenvolvido com o NextJS e Styled Components em conjunto com Typescript.',
     techs: [
       { id: 0, name: 'NextJS' },
       { id: 1, name: 'Styled Components' },
@@ -14,7 +14,7 @@ export const projects = [
       { id: 3, name: 'Framer Motion' },
       { id: 4, name: 'Figma' },
     ],
-    repository: 'https://github.com/mayconrr13/web-portifolio',
+    repository: 'https://github.com/mayconrr13/mayconrr',
     liveLink: 'https://mayconrr.vercel.app/',
   },
   {
