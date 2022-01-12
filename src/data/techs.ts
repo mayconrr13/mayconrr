@@ -55,9 +55,9 @@ export const techs = [
   },
   {
     id: 9,
-    name: 'REDUX',
-    isLearning: true,
-    imagePath: '/techs/redux.svg',
+    name: 'VTEX',
+    isLearning: false,
+    imagePath: '/techs/vtex.svg',
   },
   {
     id: 10,

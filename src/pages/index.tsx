@@ -39,7 +39,7 @@ export default function Home(): JSX.Element {
       <ProjectsSection />
       <ContactSection />
       <footer>
-        {'>>'} Desenvolvido por Maycon {'<<'}
+        {'-----'} Desenvolvido por Maycon {'-----'}
       </footer>
 
       <SideButtons />

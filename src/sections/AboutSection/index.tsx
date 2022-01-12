@@ -26,7 +26,7 @@ export const AboutSection = (): JSX.Element => {
           <h3>Olá!</h3>
 
           <p>
-            Sou Maycon, mestrando em engenharia de estruturas pela EESC-USP e
+            Sou Maycon, mestre em engenharia de estruturas pela EESC-USP e
             apaixonado pelo mundo da tecnologia. No meu tempo livre gosto de
             assistir um bom filme e, também, aproveitar para me atualizar e
             desafiar na execução de novos projetos.
@@ -39,6 +39,12 @@ export const AboutSection = (): JSX.Element => {
             conjunto com alternativas de backend como o Firebase e o FaunaDB na
             criação de aplicações modenas, perfomáticas e com escopo mais
             definido.
+          </p>
+          <p>
+            Atualmente trabalho na Corebiz como desenvolvedor front end com foco na 
+            criação de e-commerces com uso da plataforma VTEX aliada ao ReactJS no 
+            desenvolvimento de componentes customizados com foco nas necessidades 
+            do cliente.
           </p>
 
           <a href="/files/CV_Maycon_Reis_Rosario.pdf" download>
