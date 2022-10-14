@@ -30,15 +30,10 @@ export const Container = styled.section`
     > div {
       width: 300px;
       height: 300px;
-      border-radius: 50%;
+      border-radius: 1.5rem;
 
-      background-image: linear-gradient(
-          0deg,
-          rgba(255, 173, 5, 0.1),
-          rgba(255, 173, 5, 0.1)
-        ),
-        url('/profile.jpeg');
-      background-position: center;
+      background-image: url('/profile.jpg');
+      background-position: top;
       background-size: cover;
     }
   }

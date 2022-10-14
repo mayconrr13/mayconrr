@@ -62,13 +62,37 @@ export const techs = [
   {
     id: 10,
     name: 'TESTING LIBRARY',
-    isLearning: true,
+    isLearning: false,
     imagePath: '/techs/testinglibrary.svg',
   },
   {
     id: 11,
     name: 'JEST',
-    isLearning: true,
+    isLearning: false,
     imagePath: '/techs/jest.svg',
+  },
+  {
+    id: 12,
+    name: 'DOCKER',
+    isLearning: false,
+    imagePath: '/techs/docker.svg',
+  },
+  {
+    id: 13,
+    name: 'KUBERNETES',
+    isLearning: false,
+    imagePath: '/techs/k8s.svg',
+  },
+  {
+    id: 14,
+    name: 'GITLAB-CI',
+    isLearning: false,
+    imagePath: '/techs/gitlab-ci.svg',
+  },
+  {
+    id: 15,
+    name: 'PYTHON',
+    isLearning: false,
+    imagePath: '/techs/python.svg',
   },
 ];
