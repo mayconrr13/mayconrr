@@ -80,7 +80,7 @@ export const techs = [
   {
     id: 13,
     name: 'KUBERNETES',
-    isLearning: false,
+    isLearning: true,
     imagePath: '/techs/k8s.svg',
   },
   {
@@ -91,8 +91,8 @@ export const techs = [
   },
   {
     id: 15,
-    name: 'PYTHON',
-    isLearning: false,
-    imagePath: '/techs/python.svg',
+    name: 'REACT NATIVE',
+    isLearning: true,
+    imagePath: '/techs/reactNative.svg',
   },
 ];
