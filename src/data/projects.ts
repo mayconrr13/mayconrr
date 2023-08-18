@@ -88,10 +88,30 @@ export const projects = [
       { id: 2, name: 'Typescript' },
       { id: 3, name: 'React Hook Form' },
       { id: 4, name: 'Firebase' },
-      // { id: 5, name: 'JEST' },
-      // { id: 6, name: 'React Testing Library' },
     ],
     repository: 'https://github.com/mayconrr13/proffy-2.0',
     liveLink: 'https://proffy-2-0.vercel.app/',
+  },
+  {
+    id: 5,
+    name: 'Diário de obra',
+    imagePath: '/projects/workDairy.jpg',
+    description:
+      'Plataforma que permite engenheiros a controlar e monitorar os gastos de suas obras.',
+    details:
+      'Esse projeto foi desenvolvido desde a definição dos wireframes até o design final utilizando o Figma, onde também foram criados os fluxos entre as telas. O foco principal deste projeto está no estudo do React Native com o uso do Expo + TypeScript para a criaçcão de aplicaçcões mobile multiplataforma. Para os formulários será utilizado o React Hook Form em conjunto com o ZOD para a validação dos campos existentes. Para garantir que a cada novo recurso adicionado ao projeto não afete outras funcionalidades de modo inesperado, serão adicionados testes unitários nos principais pontos da aplicação com o uso do Jest em conjunto com o Testing Library. Essa aplicaçcão também contará com uma API que será desenvolvida com TypeScript cuja tecnologia principal ainda será definida. Para autenticaçcão, storage e banco de dados será utilizado o Supabase como alternativa ao Firebase com o intuíto de conhecer novas ferramentas.',
+    techs: [
+      { id: 0, name: 'React Native' },
+      { id: 1, name: 'Styled Components' },
+      { id: 2, name: 'Typescript' },
+      { id: 3, name: 'React Hook Form' },
+      { id: 4, name: 'ZOD' },
+      { id: 5, name: 'Supabase' },
+      { id: 6, name: 'Jest' },
+      { id: 7, name: 'Testing Library' },
+      { id: 8, name: 'Figma' },
+    ],
+    repository: 'https://github.com/mayconrr13/work-dairy',
+    liveLink: '',
   },
 ];

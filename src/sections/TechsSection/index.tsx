@@ -27,7 +27,7 @@ export const TechSection = (): JSX.Element => {
             <TechItem key={tech.id}>
               <img src={tech.imagePath} alt={tech.name} />
               <div>
-                {tech.isLearning && <span>--- CONHECENDO ---</span>}
+                {tech.isLearning && <span>--- ESTUDANDO ---</span>}
                 <strong>{tech.name}</strong>
               </div>
             </TechItem>
