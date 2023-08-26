@@ -38,9 +38,7 @@ export default function Home(): JSX.Element {
       <TechSection />
       <ProjectsSection />
       <ContactSection />
-      <footer>
-        {'-----'} Desenvolvido por Maycon {'-----'}
-      </footer>
+      <footer>----- Desenvolvido por Maycon -----</footer>
 
       <SideButtons />
     </Container>
