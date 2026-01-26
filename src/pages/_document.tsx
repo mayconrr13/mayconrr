@@ -51,6 +51,38 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" type="image/svg" href="/favicon.svg" />
+          <script>
+            const code = window.localStorage.getItem('code') ?? 'default_code';
+            window.mazeMetadata = window.mazeMetadata || {};
+            window.mazeMetadata.userCode = code;
+
+            (function (m, a, z, e) {
+              var s, t, u, v;
+              try {
+                t = m.sessionStorage.getItem('maze-us');
+              } catch (err) {}
+
+              if (!t) {
+                t = new Date().getTime();
+                try {
+                  m.sessionStorage.setItem('maze-us', t);
+                } catch (err) {}
+              }
+
+              u = document.currentScript || (function () {
+                var w = document.getElementsByTagName('script');
+                return w[w.length - 1];
+              })();
+              v = u && u.nonce;
+
+              s = a.createElement('script');
+              s.src = z + '?apiKey=' + e;
+              s.async = true;
+              if (v) s.setAttribute('nonce', v);
+              a.getElementsByTagName('head')[0].appendChild(s);
+              m.mazeUniversalSnippetApiKey = e;
+            })(window, document, 'https://snippet.maze.co/maze-universal-loader.js', '4e1376ea-d74b-456c-b02c-09a4b449cd64');
+          </script>
         </Head>
         <body>
           <Main />
